@@ -68,6 +68,10 @@ export default function DocPage() {
             const pageResult = await pageRes.json();
             setPageData(pageResult.page);
 
+            if (pageResult.page?.title) {
+              document.title = `${pageResult.page.title} - Solar Browser`;
+            }
+
             const flatItems: { title: string; href: string }[] = [];
             for (const s of configData.data.sections) {
               for (const it of s.items) {

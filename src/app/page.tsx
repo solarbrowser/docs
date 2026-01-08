@@ -72,6 +72,10 @@ export default function DocsPage() {
           const { data } = await configRes.json();
           setDocsData({ sections: data.sections, cards: [], homepage: data.homepage });
 
+          if (data.homepage?.title) {
+            document.title = `${data.homepage.title} - Solar Browser`;
+          }
+
           // Build navigation chain
           const flatItems: { title: string; href: string }[] = [];
           for (const s of data.sections) {
