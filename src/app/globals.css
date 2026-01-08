@@ -1,0 +1,200 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #232223;
+  --foreground: #f9f9f9;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+/* Links: keep default color for layout links, but important content links are amber via '.prose a' and ReactMarkdown components. */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Content / markdown links default amber */
+.prose a {
+  color: #FFD700; /* gold */
+  text-decoration: none; /* avoid default underline on markdown links (user expects muted styling) */
+}
+.prose a:hover {
+  text-decoration: underline; /* optional hover state */
+}
+
+/* Icon wrapper ensures inline SVG scales to text size / container width */
+.icon-wrapper svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(249, 249, 249, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(249, 249, 249, 0.2);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(249, 249, 249, 0.3);
+}
+
+/* Code blocks */
+.markdown-content pre {
+  border-radius: 8px !important;
+  padding: 16px !important;
+  margin: 16px 0 !important;
+  overflow: auto !important;
+  background: rgba(0, 0, 0, 0.3) !important;
+  border: 1px solid rgba(0, 0, 0, 0.5) !important;
+}
+
+.markdown-content pre > div {
+  margin: 0 !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+}
+
+code {
+  font-family: 'Courier New', monospace;
+}
+
+/* Section wrapper for grouping heading + content */
+.doc-section {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.doc-section.flash::before {
+  content: '';
+  position: absolute;
+  inset: -1rem;
+  background-color: rgba(26,26,26,1);
+  border-radius: 8px;
+  z-index: -1;
+  animation: flash-bg 700ms ease forwards;
+  pointer-events: none;
+}
+
+@keyframes flash-bg {
+  0% {
+    background-color: rgba(26,26,26,1);
+    opacity: 1;
+  }
+  30% {
+    background-color: rgba(26,26,26,0.85);
+    opacity: 0.85;
+  }
+  70% {
+    background-color: rgba(26,26,26,0.25);
+    opacity: 0.4;
+  }
+  100% {
+    background-color: transparent;
+    opacity: 0;
+  }
+}
+
+/* Indent content under h3 headings */
+.markdown-content h3 {
+  margin-left: 2rem;
+}
+
+.markdown-content h3 + p,
+.markdown-content h3 + ul,
+.markdown-content h3 + ol,
+.markdown-content h3 + blockquote,
+.markdown-content h3 + pre,
+.markdown-content h3 + div {
+  margin-left: 2rem;
+}
+
+/* All siblings after h3 until next h2 should be indented */
+.markdown-content h3 ~ p,
+.markdown-content h3 ~ ul,
+.markdown-content h3 ~ ol,
+.markdown-content h3 ~ blockquote {
+  margin-left: 2rem;
+}
+
+/* Special elements that need indent */
+.markdown-content h3 ~ pre {
+  margin-left: 2rem !important;
+}
+
+.markdown-content h3 ~ .overflow-x-auto {
+  margin-left: 2rem;
+}
+
+/* Reset indent for h2 and h3 headings themselves */
+.markdown-content h2 {
+  margin-left: 0 !important;
+}
+
+/* Stop indenting when we hit another h2 */
+.markdown-content h2 + p,
+.markdown-content h2 + ul,
+.markdown-content h2 + ol {
+  margin-left: 0;
+}
+
+/* TOC item active state when clicked or scrolled */
+.toc-active {
+  background-color: rgba(255,255,255,0.03);
+  color: #f59e0b; /* amber-400 */
+}
+
+/* Responsive tables */
+.markdown-content .overflow-x-auto {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.markdown-content table {
+  width: 100%;
+  min-width: 500px;
+}
+
+/* Hide scrollbar for TOC */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+

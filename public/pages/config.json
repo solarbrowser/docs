@@ -1,0 +1,143 @@
+{
+  "sections": [
+    {
+      "title": "Introduction",
+      "icon": "star",
+      "order": 1,
+      "items": [
+        {
+          "title": "Documentation",
+          "href": "/",
+          "file": null
+        },
+        {
+          "title": "FAQ",
+          "href": "/faq",
+          "file": "introduction/faq.md"
+        },
+        {
+          "title": "Performance & Security",
+          "href": "/security",
+          "file": "introduction/security.md"
+        }
+      ]
+    },
+    {
+      "title": "Getting Started",
+      "icon": "book",
+      "order": 2,
+      "items": [
+        {
+          "title": "Overview",
+          "href": "/overview",
+          "file": "getting-started/overview.md"
+        },
+        {
+          "title": "Download & Installation",
+          "href": "/download",
+          "file": "getting-started/download.md"
+        },
+        {
+          "title": "Features",
+          "href": "/features",
+          "file": "getting-started/features.md"
+        },
+        {
+          "title": "Quick Start",
+          "href": "/first-steps",
+          "file": "getting-started/first-steps.md"
+        },
+        {
+          "title": "Migration Guide",
+          "href": "/migration",
+          "file": "getting-started/migration.md"
+        }
+      ]
+    },
+    {
+      "title": "Customization",
+      "icon": "paint",
+      "order": 3,
+      "items": [
+        {
+          "title": "Overview",
+          "href": "/customization",
+          "file": "customization/customization.md"
+        }
+      ]
+    },
+    {
+      "title": "Troubleshooting",
+      "icon": "wrench",
+      "order": 4,
+      "items": [
+        {
+          "title": "Overview",
+          "href": "/troubleshooting",
+          "file": "troubleshooting/troubleshooting.md"
+        }
+      ]
+    },
+    {
+      "title": "For Developers",
+      "icon": "code",
+      "order": 5,
+      "items": [
+        {
+          "title": "Overview",
+          "href": "/developers",
+          "file": "for-developers/developers.md"
+        },
+        {
+          "title": "Build from source",
+          "href": "/build",
+          "file": "for-developers/build.md"
+        },
+        {
+          "title": "Project structure",
+          "href": "/project-structure",
+          "file": "for-developers/project-structure.md"
+        },
+        {
+          "title": "Contributing guide",
+          "href": "/contributing",
+          "file": "for-developers/contributing.md"
+        },
+        {
+          "title": "Extension development",
+          "href": "/extension-development",
+          "file": "for-developers/extension-development.md"
+        },
+        {
+          "title": "Engine internals",
+          "href": "/engine-internals",
+          "file": "for-developers/engine-internals.md"
+        },
+        {
+          "title": "Performance optimization",
+          "href": "/optimization",
+          "file": "for-developers/optimization.md"
+        },
+        {
+          "title": "Testing & Debugging",
+          "href": "/testing",
+          "file": "for-developers/testing.md"
+        },
+        {
+          "title": "ECMA compliance",
+          "href": "/test262",
+          "file": "for-developers/test262.md"
+        },
+        {
+          "title": "Future plans",
+          "href": "/future",
+          "file": "for-developers/future.md"
+        }
+      ]
+    }
+  ],
+  "homepage": {
+    "title": "Documentation",
+    "description": "Welcome to Solar's documentation!\nA clear space where you can customize your browser understand the engine build extensions and transition from any platform with ease everything here is designed to feel precise and effortless.\n"
+  }
+}
